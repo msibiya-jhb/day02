@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msibiya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/19 13:15:18 by msibiya           #+#    #+#             */
-/*   Updated: 2020/06/20 08:24:47 by msibiya          ###   ########.fr       */
+/*   Created: 2020/06/19 15:18:37 by msibiya           #+#    #+#             */
+/*   Updated: 2020/06/20 08:25:57 by msibiya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,32 +15,28 @@
 void ft_putchar(char c)
 {
 	write(1, &c, 1);
+
 }
 
 void ft_print_comb()
 {
-	char i;
-	char j;
-	char k;
-	i = '0';
-	
-	while(i <= '7')
+	char a;
+	char b;
+	a = '0';
+	while( a <= '9' )
 	{
-		j = i + 1;
-			while(j <= '8')
-			{
-			   	k = i + 1;
-					while(k <= '9')
-					{ 
-						ft_putchar(i);
-						ft_putchar(j);
-						ft_putchar(k);
-						ft_putchar(',');
-						ft_putchar(' ');
-						k = k + 1;
-					}
-					j = j + 1;
-			}
-			i = i + 1;
+		b  = a + 1;
+		while(b <= '9')
+		{
+				ft_putchar(a);
+				ft_putchar(b);
+				ft_putchar(' ');
+				ft_putchar(a);
+				ft_putchar(b);
+				ft_putchar(',');
+				ft_putchar(' ');
+				b = b + 1;
+		}
+		a = a + 1;
 	}
 }
