@@ -6,7 +6,7 @@
 /*   By: msibiya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/19 15:18:37 by msibiya           #+#    #+#             */
-/*   Updated: 2020/06/21 08:37:21 by msibiya          ###   ########.fr       */
+/*   Updated: 2020/06/21 12:40:42 by msibiya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void ft_putchar(char c)
 
 }
 
-void ft_print_comb()
+void ft_print_comb2()
 {
 	char a;
 	char b;
@@ -40,6 +40,4 @@ void ft_print_comb()
 			a = a + 1;
 			}
 }
-
-int main()
 
