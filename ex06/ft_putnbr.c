@@ -1,45 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb2.c                                   :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msibiya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/19 15:18:37 by msibiya           #+#    #+#             */
-/*   Updated: 2020/06/21 08:37:21 by msibiya          ###   ########.fr       */
+/*   Created: 2020/06/21 08:40:40 by msibiya           #+#    #+#             */
+/*   Updated: 2020/06/21 10:56:47 by msibiya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
 void ft_putchar(char c)
-{
+	{
 	write(1, &c, 1);
+	}
 
-}
-
-void ft_print_comb()
+void ft_putnbr(int nb)
 {
-	char a;
-	char b;
-	a = 0;
-		while(a < 99 )
-		{ 
-			b= a + 1;
-			while(b <= 99)
-			{
-				ft_putchar(a/10 + '0');
-				ft_putchar(a%10 + '0');
-				ft_putchar(' ');
-				ft_putchar(b/10 + '0');
-				ft_putchar(b%10 + '0');
-				ft_putchar(',');
-				ft_putchar(' ');
-				b++;
-					}
-			a = a + 1;
-			}
+	if(nb < 0)
+	{
+		ft_putchar('-');
+		nb = nb * -1;
+	}
+	if((nb/10)> 0)
+		ft_putnbr(nb/10);
+		ft_putchar(nb%10 + 48);
+	
 }
 
-int main()
 
