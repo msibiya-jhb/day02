@@ -6,7 +6,7 @@
 /*   By: msibiya <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/19 15:18:37 by msibiya           #+#    #+#             */
-/*   Updated: 2020/06/20 08:25:57 by msibiya          ###   ########.fr       */
+/*   Updated: 2020/06/21 08:34:11 by msibiya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,21 +22,24 @@ void ft_print_comb()
 {
 	char a;
 	char b;
-	a = '0';
-	while( a <= '9' )
-	{
-		b  = a + 1;
-		while(b <= '9')
-		{
-				ft_putchar(a);
-				ft_putchar(b);
+	a = 0;
+		while(a < 99 )
+		{ 
+			b= a + 1;
+			while(b <= 99)
+			{
+				ft_putchar(a/10 + '0');
+				ft_putchar(a%10 + '0');
 				ft_putchar(' ');
-				ft_putchar(a);
-				ft_putchar(b);
+				ft_putchar(b/10 + '0');
+				ft_putchar(b%10 + '0');
 				ft_putchar(',');
 				ft_putchar(' ');
-				b = b + 1;
-		}
-		a = a + 1;
-	}
+				b++;
+					}
+			a = a + 1;
+			}
 }
+
+int main()
+
